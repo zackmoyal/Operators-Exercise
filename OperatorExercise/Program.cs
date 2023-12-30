@@ -20,6 +20,20 @@
             Console.WriteLine($"{a}*{b} is {product}.");
             Console.WriteLine($"{a}/{b} is {quotient} remainder {remainder}.");
             Console.WriteLine($"{a}%{b} is {remainder}.");
+
+            //---Exercise 2---
+            Console.WriteLine("What is the radius of your circle?");
+            var radius = double.Parse( Console.ReadLine() );
+
+            AreaOfCircle(radius);
+
+            Console.WriteLine($"The area of a circle with radius of {radius} is " + AreaOfCircle(radius));
+        }
+
+        public static double AreaOfCircle(double radius)
+        {
+            var area = Math.PI * Math.Pow(radius, 2);
+            return area;
         }
     }
 }
